@@ -1,0 +1,29 @@
+<%- include("partials/header.ejs") %>
+
+
+
+
+  <div class="maincontent">
+
+    <h2>what they asked!</h2>
+    <hr/>
+
+    <% if (locals.name && locals.question) { %>
+      <h4>
+        <%=name%> :
+      </h4>
+
+      <p>
+        <%=question%>
+      </p>
+
+      <% } else { %>
+
+        <p>no questions yet</p>
+        <%} %>
+
+  </div>
+
+
+
+  <%- include("partials/footer.ejs") %>

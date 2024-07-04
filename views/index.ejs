@@ -1,0 +1,50 @@
+<%- include("partials/header.ejs") %>
+
+    <div class="maincontent">
+
+        <h1>Welcome to Ted world!</h1>
+        <!-- Your main content here -->
+
+        <img id="float" src="images/Ted.webp" width="600px" height="350px">
+
+
+        <div id="text">
+        <% if (locals.name && locals.question) { %>
+            <h4>
+              <%=name%> :
+            </h4>
+      
+            <p >
+              <%=question%>
+            </p>
+      
+            <% } else { %>
+      
+              <p>no questions yet</p>
+              <%} %>
+        </div>
+
+    </div>
+
+    <hr/>
+
+
+    <div class="form">
+
+        <form action="/askted" method="post"> <!-- action= "/askted" to direct user to askted page -->
+            <div class="mb-3">
+                <label for="inputName" class="form-label">your name</label>
+                <input type="text" class="form-control" id="inputName" name="name"  aria-describedby="emailHelp">
+                <div id="nameHelp" class="form-text">if you have a superhero name please die</div>
+            </div>
+            <div class="mb-3">
+                <label for="inputQuestion" class="form-label">your question?</label>
+                <textarea class="form-control" id="inputQuestion" name="question" rows="3" required></textarea>
+            </div>
+        
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+    </div>
+
+<%- include("partials/footer.ejs") %>

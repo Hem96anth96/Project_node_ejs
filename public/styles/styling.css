@@ -1,0 +1,38 @@
+body{
+background-color:#BC7FCD;
+
+}
+
+.header-background{
+
+    background-color: #86469C;
+}
+
+.maincontent{
+
+    margin-left: 1rem;
+    overflow: auto;
+    
+
+}
+
+.form{
+
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+}
+
+#float{
+float: left;
+display: inline;
+margin-right: 2rem;
+
+}
+
+#index{
+    display: inline;
+   
+
+}
+
